@@ -8,7 +8,16 @@ html {
   background-image: url('../img/background.png');
   background-size: cover;
   color: $fontColor;
+  font-family: $fontFamily3;
 }
 canvas{
   filter: blur(1px);
+}
+
+nav{
+    font-size: 30px;
+    li{
+        display: inline-block;
+    }
+    
 }

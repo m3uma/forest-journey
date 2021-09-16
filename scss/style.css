@@ -6,10 +6,19 @@ html {
   background-image: url("../img/background.png");
   background-size: cover;
   color: white;
+  font-family: "Tangerine", cursive;
 }
 
 canvas {
   -webkit-filter: blur(1px);
           filter: blur(1px);
+}
+
+nav {
+  font-size: 30px;
+}
+
+nav li {
+  display: inline-block;
 }
 /*# sourceMappingURL=style.css.map */
