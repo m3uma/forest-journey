@@ -7,8 +7,8 @@ html {
   position: fixed;
   background-image: url('../img/background.png');
   background-size: cover;
-  color: $fontColor;
-  font-family: $fontFamily3;
+  color: $primaryColor;
+  font-family: $secondaryFont;
 }
 canvas{
   filter: blur(1px);
@@ -16,8 +16,42 @@ canvas{
 
 nav{
     font-size: 30px;
-    li{
-        display: inline-block;
-    }
-    
+    width: 100%;
+    height: 100px;
+
+    ul{
+        list-style-type: none;
+        float: right;
+        margin-right: 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        row-gap: 1px;
+
+        
+
+        li{
+            display: inline;
+            padding: 20px;
+            width: 100%;
+
+        }
+    }    
 }
+
+@media(max-width: $mobileSize) {
+    nav{
+        ul{
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            text-align: center;
+            width: 100%;
+            margin: 0;
+            font-size: 40px;
+
+            li{
+                padding: 10px 0;
+            }
+        }
+    }
+}
+

@@ -16,9 +16,40 @@ canvas {
 
 nav {
   font-size: 30px;
+  width: 100%;
+  height: 100px;
 }
 
-nav li {
-  display: inline-block;
+nav ul {
+  list-style-type: none;
+  float: right;
+  margin-right: 50px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 1px;
+}
+
+nav ul li {
+  display: inline;
+  padding: 20px;
+  width: 100%;
+}
+
+@media (max-width: 676px) {
+  nav ul {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    font-size: 40px;
+  }
+  nav ul li {
+    padding: 10px 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
