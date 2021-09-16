@@ -1,3 +1,5 @@
+@import './theme';
+
 body,
 html {
   margin: 0px;
@@ -5,6 +7,7 @@ html {
   position: fixed;
   background-image: url('../img/background.png');
   background-size: cover;
+  color: $fontColor;
 }
 canvas{
   filter: blur(1px);
