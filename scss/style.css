@@ -38,6 +38,14 @@ nav ul li {
   text-align: center;
 }
 
+nav ul li:hover {
+  color: #08ddfa;
+}
+
+nav ul li:active {
+  font-weight: bold;
+}
+
 @media (max-width: 676px) {
   nav ul {
     -ms-grid-columns: 1fr;
