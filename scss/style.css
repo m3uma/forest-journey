@@ -35,14 +35,13 @@ nav ul li {
   display: inline;
   padding: 20px;
   width: 100%;
+  text-align: center;
 }
 
 @media (max-width: 676px) {
   nav ul {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -ms-grid-rows: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
     text-align: center;
     width: 100%;
     margin: 0;
