@@ -1,4 +1,11 @@
 @import './theme';
+@import './slider';
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
 
 body,
 html {
@@ -9,6 +16,7 @@ html {
   background-size: cover;
   color: $primaryColor;
   font-family: $secondaryFont;
+  box-sizing: border-box;
 }
 canvas{
   filter: blur(1px);
