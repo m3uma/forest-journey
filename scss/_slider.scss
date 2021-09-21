@@ -78,6 +78,50 @@
     color: $primaryColor;
 }
 
+.slider__dots {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  
+.dot {
+    width: 8px;
+    height: 8px;
+    background: gray;
+    border-radius: 50%;
+    margin: 0 3px;
+    cursor: pointer;
+}
+
+.active-dot {
+    background: #3f3f3f;
+    cursor: default;
+}
+
+@keyframes leftNext {
+    from { left: 100%; }
+    to { left: 0; }
+}
+
+@keyframes leftCurr {
+    from { left: 0; }
+    to { left: -100%; }
+}
+
+@keyframes rightNext {
+    from { left: -100%; }
+    to { left: 0; }
+}
+
+@keyframes rightCurr {
+    from { left: 0; }
+    to { left: 100%; }
+}
+
 @media(max-width: $mobileSize) {
     .slide__sentence {
         font-size: 50px;

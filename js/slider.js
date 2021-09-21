@@ -4,6 +4,7 @@ class Slider {
         this.slide = null;
         this.prevBtn = null;
         this.nextBtn = null;
+        this.divDots = null;
         this.sentence = null;
         this.currentSlide = 0;
         this.slideArrayLength = 0;
@@ -13,6 +14,7 @@ class Slider {
             slide: '[data-slide]',
             buttonPrev: '[data-button-prev]',
             buttonNext: '[data-button-next]',
+            divDots: '[data-div-dots]',
         }
     }
 
@@ -20,6 +22,7 @@ class Slider {
         this.slide = document.querySelector(this.UiSelectors.slide);
         this.prevBtn = document.querySelector(this.UiSelectors.buttonPrev);
         this.nextBtn = document.querySelector(this.UiSelectors.buttonNext);
+        this.divDots = document.querySelector(this.UiSelectors.divDots);
 
         this.sentence = document.createElement('div');
         this.sentence.classList.add('slide__sentence');
@@ -37,11 +40,28 @@ class Slider {
 
         //this.disableButtons();
         this.addListeners();
+        this.initDots();
 
         window.setInterval(() => {
             this.nextSlide();
         }, 5000);
 
+    }
+
+    initDots() {
+        for (let i = 0; i < this.slideArrayLength; ++i) {
+            const dot = document.createElement("div");
+            dot.classList.add("dot");
+            this.divDots.appendChild(dot);
+            dot.addEventListener("click", () => this.dotClick(i));
+        }
+    }
+
+    dotClick(index) {
+        if (index === this.currentSlide)
+            return false;
+        else
+            this.changeSlide(index);
     }
 
     addListeners() {
