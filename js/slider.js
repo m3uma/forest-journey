@@ -38,6 +38,10 @@ class Slider {
         //this.disableButtons();
         this.addListeners();
 
+        window.setInterval(() => {
+            this.nextSlide();
+        }, 5000);
+
     }
 
     addListeners() {
