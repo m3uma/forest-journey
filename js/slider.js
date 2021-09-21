@@ -1,10 +1,10 @@
 class Slider {
-    constructor(images) {
-        this.images = images;
+    constructor(sentences) {
+        this.sentences = sentences;
         this.slide = null;
         this.prevBtn = null;
         this.nextBtn = null;
-        this.image = null;
+        this.sentence = null;
         this.currentSlide = 0;
         this.slideArrayLength = 0;
         this.slideCaption = null;
@@ -21,14 +21,14 @@ class Slider {
         this.prevBtn = document.querySelector(this.UiSelectors.buttonPrev);
         this.nextBtn = document.querySelector(this.UiSelectors.buttonNext);
 
-        this.image = document.createElement('img');
-        this.image.classList.add('slide__image');
+        this.sentence = document.createElement('div');
+        this.sentence.classList.add('slide__sentence');
 
         this.setSlideAttributes(0);
 
-        this.slideArrayLength = this.images && this.images.length;
+        this.slideArrayLength = this.sentences && this.sentences.length;
         
-        this.slide.appendChild(this.image);
+        this.slide.appendChild(this.sentence);
 
         this.slideCaption = document.createElement('figcaption');
         this.addCaption();
@@ -78,7 +78,8 @@ class Slider {
     }
 
     setSlideAttributes(index) {
-        this.image.setAttribute('src', Array.isArray(this.images) && this.images.length && this.images[index]);
-        this.image.setAttribute('alt', `Slide ${index + 1}`);
+        this.sentence.setAttribute('innerText', Array.isArray(this.sentences) && this.sentences.length && this.sentences[index]);
+        this.sentence.innerText = this.sentences[index];
+        this.sentence.setAttribute('alt', `Slide ${index + 1}`);
     }
 }

@@ -7,7 +7,7 @@
 }
 
 .slider__container {
-    max-width: 100vw;
+    width: 100vw;
     display: flex;
     align-items: center;
     position: relative;
@@ -63,9 +63,12 @@
     }
 }
 
-.slide__image {
-    height: auto;
-    max-width: 100%;
+.slide__sentence {
+    
+    width: 100vw;
+    font-size: 100px;
+    text-align: center;
+    color: $primaryColor;
 }
 
 .slide__caption{
