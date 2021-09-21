@@ -14,7 +14,21 @@
     <link href="scss/style.css" rel="stylesheet" />
     <script src="js/canvas.js" defer></script>
     <script src="js/slider.js"></script>
-    
+    <script>
+        const imageArr = [
+            './img/gallery/bird.jpg',
+            './img/gallery/bird2.jpg',
+            './img/gallery/bird3.jpg',
+            './img/gallery/deer.jpg',
+            './img/gallery/deer2.jpg',
+        ];
+
+        window.onload = function(){
+            const slider = new Slider(imageArr);
+            slider.initSlider();
+        }
+        
+    </script>
 </head>
 
 <body>
@@ -37,18 +51,7 @@
     </main>
     
     <canvas id="canvas"></canvas>
-    <script>
-        const imageArr = [
-            './img/gallery/bird.jpg',
-            './img/gallery/bird2.jpg',
-            './img/gallery/bird3.jpg',
-            './img/gallery/deer.jpg',
-            './img/gallery/deer2.jpg',
-        ];
-
-        const slider = new Slider(imageArr);
-        slider.initSlider();
-    </script>
+    
 </body>
 
 </html>
