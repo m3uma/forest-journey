@@ -9,6 +9,7 @@ class Slider {
         this.currentSlide = 0;
         this.slideArrayLength = 0;
         this.slideCaption = null;
+        this.allDots = null;
 
         this.UiSelectors = {
             slide: '[data-slide]',
@@ -40,7 +41,7 @@ class Slider {
 
         //this.disableButtons();
         this.addListeners();
-        this.initDots();
+        this.initDots();   
 
         window.setInterval(() => {
             this.nextSlide();
@@ -55,6 +56,9 @@ class Slider {
             this.divDots.appendChild(dot);
             dot.addEventListener("click", () => this.dotClick(i));
         }
+
+        this.allDots = this.divDots.querySelectorAll(".dot");
+        this.allDots[0].classList.add("active-dot");
     }
 
     dotClick(index) {
@@ -62,6 +66,16 @@ class Slider {
             return false;
         else
             this.changeSlide(index);
+        this.activeDot(index);
+    }
+
+    activeDot(index) {
+        if (index !== this.currentSlide){
+            for (let i = 0; i < this.slideArrayLength; ++i) {
+                this.allDots[i].classList.remove("active-dot");
+            }
+        } else
+            this.allDots[this.currentSlide].classList.add("active-dot");
     }
 
     addListeners() {
@@ -93,7 +107,7 @@ class Slider {
             this.changeSlide(this.slideArrayLength - 1);
         else
             this.changeSlide(this.currentSlide - 1);
-
+        this.activeDot(this.currentSlide);
     }
 
     nextSlide() {
@@ -101,15 +115,18 @@ class Slider {
             this.changeSlide(0);
         else
             this.changeSlide(this.currentSlide + 1);
+        this.activeDot(this.currentSlide);
     }
 
     changeSlide(index) {
         // if(index === -1 || index === this.slideArrayLength) return;
+        this.activeDot(index);
         this.currentSlide = index;
 
         this.addCaption();
 
         this.setSlideAttributes(index);
+        
         //this.disableButtons();
     }
 
