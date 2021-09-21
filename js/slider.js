@@ -27,7 +27,7 @@ class Slider {
         this.setSlideAttributes(0);
 
         this.slideArrayLength = this.sentences && this.sentences.length;
-        
+
         this.slide.appendChild(this.sentence);
 
         this.slideCaption = document.createElement('figcaption');
@@ -35,20 +35,21 @@ class Slider {
         this.slideCaption.classList.add('slide__caption');
         this.slide.appendChild(this.slideCaption);
 
-        this.disableButtons();
+        //this.disableButtons();
         this.addListeners();
 
     }
 
     addListeners() {
-        this.prevBtn.addEventListener('click', () => this.changeSlide(this.currentSlide - 1));
-        this.nextBtn.addEventListener('click', () => this.changeSlide(this.currentSlide + 1));
+        this.prevBtn.addEventListener('click', () => this.prevSlide());
+
+        this.nextBtn.addEventListener('click', () => this.nextSlide());
 
         document.addEventListener('keydown', (e) => {
-            if(e.keyCode === 37) {
-                this.changeSlide(this.currentSlide - 1);
-            } else if(e.keyCode === 39) {
-                this.changeSlide(this.currentSlide + 1);
+            if (e.keyCode === 37) {
+                this.prevSlide();
+            } else if (e.keyCode === 39) {
+                this.nextSlide();
             }
         })
     }
@@ -63,18 +64,33 @@ class Slider {
             : this.nextBtn.removeAttribute('disabled');
     }
 
+    prevSlide() {
+        if (this.currentSlide < 1)
+            this.changeSlide(this.slideArrayLength - 1);
+        else
+            this.changeSlide(this.currentSlide - 1);
+
+    }
+
+    nextSlide() {
+        if (this.currentSlide >= this.slideArrayLength - 1)
+            this.changeSlide(0);
+        else
+            this.changeSlide(this.currentSlide + 1);
+    }
+
     changeSlide(index) {
-        if(index === -1 || index === this.slideArrayLength) return;
+        // if(index === -1 || index === this.slideArrayLength) return;
         this.currentSlide = index;
 
         this.addCaption();
 
         this.setSlideAttributes(index);
-        this.disableButtons();
+        //this.disableButtons();
     }
 
     addCaption() {
-        this.slideCaption.innerText = `${this.currentSlide +1}/${this.slideArrayLength}`;
+        this.slideCaption.innerText = `${this.currentSlide + 1}/${this.slideArrayLength}`;
     }
 
     setSlideAttributes(index) {
