@@ -103,87 +103,15 @@
 .dot {
   width: 8px;
   height: 8px;
-  background: gray;
+  background: grey;
   border-radius: 50%;
   margin: 0 3px;
   cursor: pointer;
 }
 
 .active-dot {
-  background: #3f3f3f;
+  background: #01474a;
   cursor: default;
-}
-
-@-webkit-keyframes leftNext {
-  from {
-    left: 100%;
-  }
-  to {
-    left: 0;
-  }
-}
-
-@keyframes leftNext {
-  from {
-    left: 100%;
-  }
-  to {
-    left: 0;
-  }
-}
-
-@-webkit-keyframes leftCurr {
-  from {
-    left: 0;
-  }
-  to {
-    left: -100%;
-  }
-}
-
-@keyframes leftCurr {
-  from {
-    left: 0;
-  }
-  to {
-    left: -100%;
-  }
-}
-
-@-webkit-keyframes rightNext {
-  from {
-    left: -100%;
-  }
-  to {
-    left: 0;
-  }
-}
-
-@keyframes rightNext {
-  from {
-    left: -100%;
-  }
-  to {
-    left: 0;
-  }
-}
-
-@-webkit-keyframes rightCurr {
-  from {
-    left: 0;
-  }
-  to {
-    left: 100%;
-  }
-}
-
-@keyframes rightCurr {
-  from {
-    left: 0;
-  }
-  to {
-    left: 100%;
-  }
 }
 
 @media (max-width: 676px) {
