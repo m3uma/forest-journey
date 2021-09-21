@@ -20,12 +20,19 @@ html {
 }
 canvas{
   filter: blur(1px);
+  z-index: -900;
+  position: absolute;
+  top: 0;
+}
+
+main {
+    z-index: 950;
 }
 
 nav{
     font-size: 30px;
     width: 100%;
-    height: 100px;
+    height: 10vh;
 
     ul{
         list-style-type: none;

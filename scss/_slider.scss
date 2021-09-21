@@ -2,11 +2,19 @@
 
 .slider {
     width: 100vw;
+    height: 90vh;
     display: flex;
     justify-content: center;
 }
 
+@media(max-height: $mobileHeight) {
+    .slider{
+        height: 70vh;
+    }
+}
+
 .slider__container {
+    height: 100%;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -64,11 +72,22 @@
 }
 
 .slide__sentence {
-    
     width: 100vw;
     font-size: 100px;
     text-align: center;
     color: $primaryColor;
+}
+
+@media(max-width: $mobileSize) {
+    .slide__sentence {
+        font-size: 50px;
+    }
+}
+
+@media(max-width: $miniSize) {
+    .slide__sentence {
+        font-size: 40px;
+    }
 }
 
 .slide__caption{

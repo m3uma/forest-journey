@@ -1,5 +1,6 @@
 .slider {
   width: 100vw;
+  height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8,7 +9,14 @@
           justify-content: center;
 }
 
+@media (max-height: 850px) {
+  .slider {
+    height: 70vh;
+  }
+}
+
 .slider__container {
+  height: 100%;
   width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -79,6 +87,18 @@
   color: white;
 }
 
+@media (max-width: 676px) {
+  .slide__sentence {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 300px) {
+  .slide__sentence {
+    font-size: 40px;
+  }
+}
+
 .slide__caption {
   width: 100%;
   text-align: center;
@@ -108,12 +128,19 @@ html {
 canvas {
   -webkit-filter: blur(1px);
           filter: blur(1px);
+  z-index: -900;
+  position: absolute;
+  top: 0;
+}
+
+main {
+  z-index: 950;
 }
 
 nav {
   font-size: 30px;
   width: 100%;
-  height: 100px;
+  height: 10vh;
 }
 
 nav ul {
