@@ -11,9 +11,10 @@ body,
 html {
   margin: 0px;
   padding: 0px;
-  position: fixed;
+  position: sticky;
   background-image: url('../img/background.png');
   background-size: cover;
+  background-attachment: fixed;
   color: $primaryColor;
   font-family: $secondaryFont;
   box-sizing: border-box;
