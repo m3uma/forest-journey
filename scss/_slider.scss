@@ -9,7 +9,7 @@
 
 @media(max-height: $mobileHeight) {
     .slider{
-        height: 70vh;
+        height: 60vh;
     }
 }
 
@@ -71,6 +71,7 @@
     font-size: 100px;
     text-align: center;
     color: $primaryColor;
+    padding: 0 60px;
 }
 
 .slider__dots {
