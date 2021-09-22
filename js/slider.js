@@ -37,7 +37,7 @@ class Slider {
         this.slideCaption = document.createElement('figcaption');
         this.addCaption();
         this.slideCaption.classList.add('slide__caption');
-        this.slide.appendChild(this.slideCaption);
+        //this.slide.appendChild(this.slideCaption);
 
         //this.disableButtons();
         this.addListeners();
