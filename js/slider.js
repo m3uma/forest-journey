@@ -41,10 +41,12 @@ class Slider {
 
         //this.disableButtons();
         this.addListeners();
-        this.initDots();   
+        this.initDots();
+        this.animateSlider();
 
         window.setInterval(() => {
             this.nextSlide();
+            this.animateSlider();
         }, 5000);
 
     }
@@ -67,10 +69,11 @@ class Slider {
         else
             this.changeSlide(index);
         this.activeDot(index);
+        this.animateSlider();
     }
 
     activeDot(index) {
-        if (index !== this.currentSlide){
+        if (index !== this.currentSlide) {
             for (let i = 0; i < this.slideArrayLength; ++i) {
                 this.allDots[i].classList.remove("active-dot");
             }
@@ -108,6 +111,7 @@ class Slider {
         else
             this.changeSlide(this.currentSlide - 1);
         this.activeDot(this.currentSlide);
+        this.animateSlider();
     }
 
     nextSlide() {
@@ -116,6 +120,7 @@ class Slider {
         else
             this.changeSlide(this.currentSlide + 1);
         this.activeDot(this.currentSlide);
+        this.animateSlider();
     }
 
     changeSlide(index) {
@@ -124,9 +129,7 @@ class Slider {
         this.currentSlide = index;
 
         this.addCaption();
-
         this.setSlideAttributes(index);
-        
         //this.disableButtons();
     }
 
@@ -139,4 +142,16 @@ class Slider {
         this.sentence.innerText = this.sentences[index];
         this.sentence.setAttribute('alt', `Slide ${index + 1}`);
     }
+
+    animateSlider() {
+        this.slide.lastChild.style.animationName = "sliderAnimation";
+        this.slide.lastChild.style.animationDuration = "1.5s";
+
+        setTimeout(() => {
+            this.slide.lastChild.removeAttribute("style");
+        }, 500);
+
+    }
+
+
 }
