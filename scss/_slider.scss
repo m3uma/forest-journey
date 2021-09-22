@@ -114,3 +114,9 @@
     text-align: center;
     font-size: 25px;
 }
+
+@keyframes sliderAnimation {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
