@@ -147,6 +147,57 @@
 .offer {
   width: 100vw;
   height: 100vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.offer .offer__table {
+  border: solid 2px white;
+  border-radius: 50px;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: rgba(128, 128, 128, 0.4);
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.offer .offer__table tr {
+  padding: 10px;
+  text-align: center;
+}
+
+.offer .offer__table tr:hover {
+  font-weight: bold;
+}
+
+.offer .offer__table tr th {
+  font-family: "Major Mono Display", monospace;
+  font-size: 30px;
+  padding: 20px;
+  border: solid 2px white;
+  border-radius: 20px;
+  margin: 2px;
+}
+
+.offer .offer__table tr td {
+  font-family: "Syne Mono", monospace;
+  font-size: 20px;
+  padding: 10px;
+  margin: 2px;
+}
+
+.offer .offer__table--mobile {
+  display: none;
 }
 
 *, *::after, *::before {
