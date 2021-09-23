@@ -201,6 +201,15 @@
   display: none;
 }
 
+@media (max-height: 850px) {
+  .offer {
+    -webkit-box-align: normal;
+        -ms-flex-align: normal;
+            align-items: normal;
+    margin: 200px 0;
+  }
+}
+
 @media (max-width: 1050px) {
   .offer .offer__table {
     width: 95%;

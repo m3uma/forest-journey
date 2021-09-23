@@ -50,6 +50,13 @@
     }
 }
 
+@media(max-height: $mobileHeight) {
+    .offer{
+        align-items: normal;
+        margin: 200px 0;
+    }
+}
+
 @media(max-width: 1050px) {
     .offer{
         .offer__table{
