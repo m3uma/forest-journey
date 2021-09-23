@@ -1,5 +1,6 @@
 @import './theme';
 @import './slider';
+@import './offer';
 
 *, *::after, *::before{
     margin: 0;
@@ -44,18 +45,23 @@ nav{
         grid-template-columns: 1fr 1fr 1fr 1fr;
         row-gap: 1px;
 
-        li{
+        li {
             display: inline;
             padding: 20px;
             width: 100%;
             text-align: center;
 
-            &:hover{
-                color: $secondaryColor;      
-            }
+            a {
+                text-decoration: none;
+                color: $primaryColor;
+ 
+                &:hover{
+                    color: $secondaryColor;      
+                }
 
-            &:active{
-                font-weight: bold;
+                &:active{
+                    font-weight: bold;
+                }
             }
         }
     }    
