@@ -24,7 +24,7 @@ html {
 canvas{
   filter: blur(1px);
   z-index: -900;
-  position: absolute;
+  position: fixed;
   top: 0;
 }
 
