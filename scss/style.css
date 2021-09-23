@@ -144,6 +144,11 @@
   }
 }
 
+.offer {
+  width: 100vw;
+  height: 100vh;
+}
+
 *, *::after, *::before {
   margin: 0;
   padding: 0;
