@@ -14,6 +14,7 @@
         background-color: rgba(128, 128, 128, 0.4);
         position: absolute;
         width: fit-content;
+        border-spacing: 10px 0;
 
         tr {
             padding: 10px;
@@ -49,8 +50,24 @@
     }
 }
 
+@media(max-width: 1050px) {
+    .offer{
+        .offer__table{
+            width: 95%;
+            tr {
+                th {
+                    padding: 20px 10px;
+                }
+            }
+        }
+    }
+}
+
 @media(max-width: $mobileSize) {
     .offer {
+        align-items: normal;
+        margin: 100px 0;
+
         .offer__table{
             display: none;
         }
@@ -63,16 +80,11 @@
             margin: 0 auto;
             background-color: rgba(128, 128, 128, 0.4);
             position: absolute;
-            width: fit-content;
+            width: 95%;
 
             tr {
                 padding: 10px;
                 text-align: center;
-
-                &:hover{
-                    font-weight: bold;
-                    
-                }
 
                 th {
                     font-family: $fontFamily1;
@@ -91,6 +103,23 @@
                 }
             }
 
+        }
+    }
+}
+
+@media(max-width: $miniSize) {
+    .offer {
+        .offer__table--mobile{
+            tr {
+                th {
+                    font-size: 25px;
+                    padding: 10px;
+                }
+
+                td {
+                    font-size: 18px;
+                }
+            }
         }
     }
 }
