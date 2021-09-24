@@ -20,6 +20,28 @@ html {
   font-family: $secondaryFont;
   box-sizing: border-box;
   scroll-behavior: smooth;
+
+    &::-webkit-scrollbar-track   {
+        box-shadow: inset 100px 100px 16px rgba(0,0,0,0.3);
+        border-radius: 10px;
+        background-color: $activeDot;
+    }
+
+    &::-webkit-scrollbar {
+        width: 7px;
+        height: 7px;
+        background-color: $activeDot;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        box-shadow: 1px 1px 2px -1px $primaryColor inset;
+        background-color: $scrollColor;
+
+        &:hover {
+            background-color: $thirdColor;
+        }
+    }
 }
 
 canvas{
