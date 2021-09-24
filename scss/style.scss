@@ -19,6 +19,7 @@ html {
   color: $primaryColor;
   font-family: $secondaryFont;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 canvas{
