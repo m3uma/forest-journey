@@ -73,9 +73,10 @@ nav{
             a {
                 text-decoration: none;
                 color: $primaryColor;
+                transition: opacity 0.2s ease-out;
  
                 &:hover{
-                    color: $secondaryColor;      
+                   opacity: 0.8;                         
                 }
 
                 &:active{

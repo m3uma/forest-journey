@@ -350,10 +350,12 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: white;
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
 }
 
 nav ul li a:hover {
-  color: #08ddfa;
+  opacity: 0.8;
 }
 
 nav ul li a:active {
