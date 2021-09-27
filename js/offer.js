@@ -86,6 +86,6 @@ const Offer = [
 console.log(Offer.length);
 
 for (let i in Offer){
-    console.log(Offer[i]);
+    console.log(`Adventure: ${Offer[i].adventure}, Adults: ${Offer[i].adults}, Kids: ${Offer[i].kids}, Group: ${Offer[i].group}`);
 }
 
