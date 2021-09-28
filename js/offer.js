@@ -50,30 +50,25 @@ let offer = [
 
     {
         adventure: "4 adventures pack",
-        adults: "10% discount",
-        kids: "10% discount",
+        family: "10% discount",
         group: "15% discount",
     },
 
     {
         adventure: "5 adventures pack",
-        adults: "15% discount",
-        kids: "15% discount",
+        family: "15% discount",
         group: "20% discount",
     },
 
     {
         adventure: "6 adventures pack",
-        adults: "20% discount",
-        kids: "20% discount",
+        family: "20% discount",
         group: "22% discount",
     },
 
     {
         adventure: "full package with a twist",
-        adults: "25% discount",
-        kids: "25% discount",
-        group: "25% discount",
+        discount: "25% discount",
     },
 
     {
@@ -88,7 +83,7 @@ function generateTableHead(table, data) {
     for (let key of data) {
         let th = document.createElement("th");
         let text = document.createTextNode(key);
-        if(key === "group")
+        if (key === "group")
             text = document.createTextNode(`${key}*`);
         th.appendChild(text);
         row.appendChild(th);
@@ -104,11 +99,10 @@ function generateTable(table, data) {
 
             if (key === 'info')
                 cell.colSpan = "4";
-            else if (element[key].includes("adventures pack")) {
-                console.log(row);
-               
-            }
-
+            else if (key === 'discount')
+                cell.colSpan = "3";
+            else if (key === 'family')
+                cell.colSpan = "2";
             cell.appendChild(text);
         }
     }
@@ -135,11 +129,13 @@ function generateTableMobile(table, data) {
                 text = document.createTextNode(`${element[key]} `);
                 cell.appendChild(text);
                 break;
-            }
+            } 
             else {
                 text = document.createTextNode(`${key}: ${element[key]} `);
                 cell.appendChild(text);
             }
+            
+                
             cell.appendChild(document.createElement("br"));
         }
     }
