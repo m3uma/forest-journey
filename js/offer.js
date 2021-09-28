@@ -129,7 +129,10 @@ function generateTableMobile(table, data) {
                 text = document.createTextNode(`${element[key]} `);
                 cell.appendChild(text);
                 break;
-            } 
+            } else if (key === 'family') {
+                text = document.createTextNode(`adults & kids: ${element[key]} `);
+                cell.appendChild(text);
+            }
             else {
                 text = document.createTextNode(`${key}: ${element[key]} `);
                 cell.appendChild(text);
