@@ -120,19 +120,23 @@ function generateTableMobile(table, data) {
                 text = document.createTextNode(`${element[key]} `);
                 titleAdventure.appendChild(text);
                 cell.appendChild(titleAdventure);
+
+            } else if (key === 'info' || element === data[data.length - 2]) {
+                text = document.createTextNode(`${element[key]} `);
+                cell.appendChild(text);
+                break;
             }
-            else{
+            else {
                 text = document.createTextNode(`${key}: ${element[key]} `);
                 cell.appendChild(text);
             }
-
             cell.appendChild(document.createElement("br"));
         }
     }
 }
 
 let table = document.querySelector(".offer__table");
-let tableMobile = document.querySelector(".offer__table--mobile")
+let tableMobile = document.querySelector(".offer__table--mobile");
 let data = Object.keys(offer[0]);
 generateTableHead(table, data);
 generateTable(table, offer);
