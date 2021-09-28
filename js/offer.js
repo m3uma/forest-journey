@@ -125,7 +125,7 @@ function generateTableMobile(table, data) {
                 titleAdventure.appendChild(text);
                 cell.appendChild(titleAdventure);
 
-            } else if (key === 'info' || element === data[data.length - 2]) {
+            } else if (key === 'info' || key === 'discount' ) {
                 text = document.createTextNode(`${element[key]} `);
                 cell.appendChild(text);
                 break;
