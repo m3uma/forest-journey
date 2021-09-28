@@ -1,69 +1,69 @@
 let offer = [
     {
         adventure: "walk in the woods",
-        adults: "30 PLN",
-        kids: "15 PLN",
-        group: "20 PLN",
+        Adults: "30 PLN",
+        Kids: "15 PLN",
+        Group: "20 PLN",
     },
 
     {
         adventure: "expedition into the unknown",
-        adults: "50 PLN",
-        kids: "25 PLN",
-        group: "35 PLN",
+        Adults: "50 PLN",
+        Kids: "25 PLN",
+        Group: "35 PLN",
     },
 
     {
         adventure: "forest animals search",
-        adults: "30 PLN",
-        kids: "15 PLN",
-        group: "20 PLN",
+        Adults: "30 PLN",
+        Kids: "15 PLN",
+        Group: "20 PLN",
     },
 
     {
         adventure: "collecting forest treats",
-        adults: "30 PLN",
-        kids: "15 PLN",
-        group: "20 PLN",
+        Adults: "30 PLN",
+        Kids: "15 PLN",
+        Group: "20 PLN",
     },
 
     {
         adventure: "ancient legends of the forest by the fire",
-        adults: "80 PLN",
-        kids: "40 PLN",
-        group: "60 PLN",
+        Adults: "80 PLN",
+        Kids: "40 PLN",
+        Group: "60 PLN",
     },
 
     {
         adventure: "elven feast",
-        adults: "100 PLN",
-        kids: "50 PLN",
-        group: "75 PLN",
+        Adults: "100 PLN",
+        Kids: "50 PLN",
+        Group: "75 PLN",
     },
 
     {
         adventure: "night under the stars",
-        adults: "150 PLN",
-        kids: "75 PLN",
-        group: "100 PLN",
+        Adults: "150 PLN",
+        Kids: "75 PLN",
+        Group: "100 PLN",
     },
 
     {
         adventure: "4 adventures pack",
         family: "10% discount",
-        group: "15% discount",
+        Group: "15% discount",
     },
 
     {
         adventure: "5 adventures pack",
         family: "15% discount",
-        group: "20% discount",
+        Group: "20% discount",
     },
 
     {
         adventure: "6 adventures pack",
         family: "20% discount",
-        group: "22% discount",
+        Group: "22% discount",
     },
 
     {
@@ -130,15 +130,15 @@ function generateTableMobile(table, data) {
                 cell.appendChild(text);
                 break;
             } else if (key === 'family') {
-                text = document.createTextNode(`adults & kids: ${element[key]} `);
+                text = document.createTextNode(`Adults & Kids: ${element[key]} `);
                 cell.appendChild(text);
+                
             }
             else {
                 text = document.createTextNode(`${key}: ${element[key]} `);
-                cell.appendChild(text);
+                cell.appendChild(text);  
             }
-            
-                
+
             cell.appendChild(document.createElement("br"));
         }
     }
