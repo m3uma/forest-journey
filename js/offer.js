@@ -88,6 +88,8 @@ function generateTableHead(table, data) {
     for (let key of data) {
         let th = document.createElement("th");
         let text = document.createTextNode(key);
+        if(key === "group")
+            text = document.createTextNode(`${key}*`);
         th.appendChild(text);
         row.appendChild(th);
     }
@@ -99,6 +101,14 @@ function generateTable(table, data) {
         for (key in element) {
             let cell = row.insertCell();
             let text = document.createTextNode(element[key]);
+
+            if (key === 'info')
+                cell.colSpan = "4";
+            else if (element[key].includes("adventures pack")) {
+                console.log(row);
+               
+            }
+
             cell.appendChild(text);
         }
     }
