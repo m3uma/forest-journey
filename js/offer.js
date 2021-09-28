@@ -86,27 +86,54 @@ function generateTableHead(table, data) {
     let thead = table.createTHead();
     let row = thead.insertRow();
     for (let key of data) {
-      let th = document.createElement("th");
-      let text = document.createTextNode(key);
-      th.appendChild(text);
-      row.appendChild(th);
+        let th = document.createElement("th");
+        let text = document.createTextNode(key);
+        th.appendChild(text);
+        row.appendChild(th);
     }
-  }
+}
 
-  function generateTable(table, data) {
+function generateTable(table, data) {
     for (let element of data) {
-      let row = table.insertRow();
-      for (key in element) {
-        let cell = row.insertCell();
-        let text = document.createTextNode(element[key]);
-        cell.appendChild(text);
-      }
+        let row = table.insertRow();
+        for (key in element) {
+            let cell = row.insertCell();
+            let text = document.createTextNode(element[key]);
+            cell.appendChild(text);
+        }
     }
-  }
+}
 
-  
-  
-  let table = document.querySelector("table");
-  let data = Object.keys(offer[0]);
-  generateTableHead(table, data);
-  generateTable(table, offer);
+function generateTableMobile(table, data) {
+    let row = table.insertRow();
+    let th = document.createElement("th");
+    let text = document.createTextNode("adventures");
+    let titleAdventure = null;
+    th.appendChild(text);
+    row.appendChild(th);
+    for (let element of data) {
+        let row = table.insertRow();
+        let cell = row.insertCell();
+        for (key in element) {
+            if (key === 'adventure') {
+                titleAdventure = document.createElement("b");
+                text = document.createTextNode(`${element[key]} `);
+                titleAdventure.appendChild(text);
+                cell.appendChild(titleAdventure);
+            }
+            else{
+                text = document.createTextNode(`${key}: ${element[key]} `);
+                cell.appendChild(text);
+            }
+
+            cell.appendChild(document.createElement("br"));
+        }
+    }
+}
+
+let table = document.querySelector(".offer__table");
+let tableMobile = document.querySelector(".offer__table--mobile")
+let data = Object.keys(offer[0]);
+generateTableHead(table, data);
+generateTable(table, offer);
+generateTableMobile(tableMobile, offer);
