@@ -125,18 +125,21 @@ function generateTableMobile(table, data) {
                 titleAdventure.appendChild(text);
                 cell.appendChild(titleAdventure);
 
-            } else if (key === 'info' || key === 'discount' ) {
+            } else if (key === 'info' || key === 'discount') {
                 text = document.createTextNode(`${element[key]} `);
                 cell.appendChild(text);
-                break;
+
             } else if (key === 'family') {
                 text = document.createTextNode(`Adults & Kids: ${element[key]} `);
                 cell.appendChild(text);
-                
+
+            } else if (key === "Group") {
+                text = document.createTextNode(`${key}*: ${element[key]} `);
+                cell.appendChild(text);
             }
             else {
                 text = document.createTextNode(`${key}: ${element[key]} `);
-                cell.appendChild(text);  
+                cell.appendChild(text);
             }
 
             cell.appendChild(document.createElement("br"));
