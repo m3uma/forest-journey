@@ -76,6 +76,10 @@ let offer = [
     }
 ]
 
+let details = ["detals1", "detals2", "detals3", "detals4",
+    "detals5", "detals6", "detals7", "detals8", "detals9",
+    "detals10", "detals11", "detals12"]
+
 
 function generateTableHead(table, data) {
     let thead = table.createTHead();
@@ -90,11 +94,14 @@ function generateTableHead(table, data) {
     }
 }
 
-function generateTable(table, data) {
+function generateTable(table, data, detail) {
+    rowCounter = 0;
     for (let element of data) {
         let row = table.insertRow();
         for (key in element) {
             let cell = row.insertCell();
+            row.id = rowCounter;
+            cell.onclick = () => showDetails(data[row.id].adventure, detail[row.id]);
             let text = document.createTextNode(element[key]);
 
             if (key === 'info')
@@ -104,20 +111,27 @@ function generateTable(table, data) {
             else if (key === 'family')
                 cell.colSpan = "2";
             cell.appendChild(text);
+
+
         }
+        rowCounter++;
     }
+
 }
 
-function generateTableMobile(table, data) {
+function generateTableMobile(table, data, detail) {
     let row = table.insertRow();
     let th = document.createElement("th");
     let text = document.createTextNode("adventures");
     let titleAdventure = null;
+    rowCounter = 0;
     th.appendChild(text);
     row.appendChild(th);
     for (let element of data) {
         let row = table.insertRow();
         let cell = row.insertCell();
+        row.id = rowCounter;
+        cell.onclick = () => showDetails(data[row.id].adventure, detail[row.id]);
         for (key in element) {
             if (key === 'adventure') {
                 titleAdventure = document.createElement("b");
@@ -144,12 +158,31 @@ function generateTableMobile(table, data) {
 
             cell.appendChild(document.createElement("br"));
         }
+        rowCounter++;
     }
 }
+
+function showDetails(title, data) {
+    detailsContent.style.display = "block";
+    const detailDiv = document.querySelector(".detail__content");
+    const detailHeader = document.querySelector(".h1__detail");
+    detailHeader.innerHTML = title;
+    detailDiv.innerHTML = data;
+
+}
+
+document.querySelector(".close__details").onclick = () => detailsContent.style.display = "none";
 
 let table = document.querySelector(".offer__table");
 let tableMobile = document.querySelector(".offer__table--mobile");
 let data = Object.keys(offer[0]);
+let rowCounter = 0;
+const detailsContent = document.querySelector('.offer__detail');
+
 generateTableHead(table, data);
-generateTable(table, offer);
-generateTableMobile(tableMobile, offer);
+generateTable(table, offer, details);
+generateTableMobile(tableMobile, offer, details);
+
+
+
+
