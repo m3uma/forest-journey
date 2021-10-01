@@ -1,6 +1,7 @@
 @import './theme';
 @import './slider';
 @import './offer';
+@import './gallery';
 
 *, *::after, *::before{
     margin: 0;
@@ -59,6 +60,7 @@ main {
     position: fixed;
     bottom: 10px;
     right: 10px;
+    z-index: 1050;
     
     img {
         width: 100px;
