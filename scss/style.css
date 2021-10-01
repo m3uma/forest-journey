@@ -146,7 +146,7 @@
 
 .offer {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -319,6 +319,47 @@
   }
 }
 
+.gallery {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gallery .swiper {
+  width: 100%;
+  padding: 50px 0;
+}
+
+.gallery .swiper .swiper-slide {
+  width: 500px;
+  height: 500px;
+}
+
+.gallery .swiper .swiper-slide img {
+  width: 50vw;
+}
+
+.gallery .swiper .swiper-pagination .swiper-pagination-bullet {
+  background-color: grey;
+}
+
+.gallery .swiper .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #01474a;
+}
+
+.gallery .swiper .swiper-button-prev, .gallery .swiper .swiper-button-next {
+  color: white;
+}
+
 *, *::after, *::before {
   margin: 0;
   padding: 0;
@@ -386,6 +427,7 @@ main {
   position: fixed;
   bottom: 10px;
   right: 10px;
+  z-index: 1050;
 }
 
 .ico img {

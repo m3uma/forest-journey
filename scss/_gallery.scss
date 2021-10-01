@@ -1,0 +1,38 @@
+@import './theme';
+
+.gallery{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .swiper {
+        width: 100%;
+        padding: 50px 0;
+
+        .swiper-slide {
+            width: 500px;
+            height: 500px;
+
+            img {
+                width: 50vw;
+            }
+        }
+
+        .swiper-pagination {
+            .swiper-pagination-bullet {
+                background-color: $dotColor;
+            }
+            
+            .swiper-pagination-bullet-active {
+                background-color: $thirdColor;
+            }
+        }
+
+        .swiper-button-prev, .swiper-button-next {
+            color: $primaryColor;
+        }
+      }
+}
