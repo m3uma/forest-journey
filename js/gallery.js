@@ -6,7 +6,7 @@ const swiper = new Swiper('.swiper', {
         depth: 500,
     },
     effect: 'coverflow',
-    loopedSlides: 1,
+    loopedSlides: 4,
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -19,4 +19,5 @@ const swiper = new Swiper('.swiper', {
         invert: true,
     },
     slidesPerView: 'auto',
+    loop: true,
 });
