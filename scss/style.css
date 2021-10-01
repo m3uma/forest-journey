@@ -360,6 +360,32 @@
   color: white;
 }
 
+@media (max-width: 676px) {
+  .gallery .swiper .swiper-slide {
+    width: 300px;
+    height: 300px;
+  }
+  .gallery .swiper .swiper-slide img {
+    width: 80vw;
+  }
+  .gallery .swiper .swiper-button-prev, .gallery .swiper .swiper-button-next {
+    display: none;
+  }
+}
+
+@media (max-width: 300px) {
+  .gallery .swiper .swiper-slide {
+    width: 270px;
+    height: 270px;
+  }
+  .gallery .swiper .swiper-slide img {
+    width: 95vw;
+  }
+  .gallery .swiper .swiper-button-prev, .gallery .swiper .swiper-button-next {
+    display: none;
+  }
+}
+
 *, *::after, *::before {
   margin: 0;
   padding: 0;
