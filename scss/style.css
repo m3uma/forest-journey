@@ -346,10 +346,20 @@
 .gallery .swiper .swiper-slide {
   width: 500px;
   height: 500px;
+  text-align: center;
 }
 
 .gallery .swiper .swiper-slide img {
   width: 50vw;
+}
+
+.gallery .swiper .swiper-slide p {
+  font-family: "Syne Mono", monospace;
+  margin-top: 40%;
+  font-size: 40px;
+  background: rgba(128, 128, 128, 0.8);
+  padding: 50px 0;
+  border-radius: 20px;
 }
 
 .gallery .swiper .swiper-pagination .swiper-pagination-bullet {
