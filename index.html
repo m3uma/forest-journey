@@ -13,9 +13,12 @@
         href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Nanum+Gothic+Coding:wght@400;700&family=Syne+Mono&family=Tangerine:wght@400;700&display=swap"
         rel="stylesheet">
     <link href="scss/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/canvas.js" defer></script>
     <script src="js/slider.js"></script>
     <script src="js/offer.js" defer></script>
+    <script src="js/gallery.js" defer></script>
     <script>
         const sentenceArr = [
             'Experience an unforgettable adventure with us',
@@ -25,11 +28,11 @@
             'Rest in a mythical place',
         ];
 
-        window.onload = function(){
+        window.onload = function () {
             const slider = new Slider(sentenceArr);
             slider.initSlider();
         }
-        
+
     </script>
 </head>
 
@@ -44,7 +47,7 @@
                 <li>any questions?</li>
             </ul>
         </nav>
-        
+
         <div class="slider">
             <section class="slider__container">
                 <button class="slider__button slider__button--prev" data-button-prev></button>
@@ -64,9 +67,10 @@
             <table class="offer__table"></table>
             <table class="offer__table--mobile"></table>
         </div>
-        <div class="ico"><a href="#home"><img src="./img/deer.png" alt="deer-arrow"/></a></div>
+        <div class="ico"><a href="#home"><img src="./img/deer.png" alt="deer-arrow" /></a></div>
     </main>
     <canvas id="canvas"></canvas>
 
 </body>
+
 </html>
