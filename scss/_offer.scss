@@ -1,6 +1,6 @@
 .offer{
     width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
     position: relative;
     display: flex;
     justify-content: center;
@@ -114,6 +114,7 @@
     .offer {
         align-items: normal;
         margin: 100px 0;
+        min-height: 200vh;
 
         .offer__detail {
             width: 300px;
@@ -161,6 +162,7 @@
 
 @media(max-width: $miniSize) {
     .offer {
+        min-height: 230vh;
 
         .offer__detail {
             width: 250px;
