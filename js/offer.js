@@ -101,7 +101,11 @@ function generateTable(table, data, detail) {
         for (key in element) {
             let cell = row.insertCell();
             row.id = rowCounter;
-            cell.onclick = () => showDetails(data[row.id].adventure, detail[row.id]);
+            cell.onclick = () => {
+                (data[row.id].adventure)
+                ? showDetails(data[row.id].adventure, detail[row.id])
+                : showDetails("info", detail[row.id]);
+            }
             let text = document.createTextNode(element[key]);
 
             if (key === 'info')
