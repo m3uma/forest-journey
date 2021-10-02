@@ -135,7 +135,11 @@ function generateTableMobile(table, data, detail) {
         let row = table.insertRow();
         let cell = row.insertCell();
         row.id = rowCounter;
-        cell.onclick = () => showDetails(data[row.id].adventure, detail[row.id]);
+        cell.onclick = () => {
+            (data[row.id].adventure)
+            ? showDetails(data[row.id].adventure, detail[row.id])
+            : showDetails("info", detail[row.id]);
+        }
         for (key in element) {
             if (key === 'adventure') {
                 titleAdventure = document.createElement("b");
