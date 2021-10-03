@@ -78,7 +78,7 @@ let offer = [
 
 let details = ["detals1", "detals2", "detals3", "detals4",
     "detals5", "detals6", "detals7", "detals8", "detals9",
-    "detals10", "detals11", "detals12"]
+    "detals10", "detals11", "There must be at least 10 people in the group."]
 
 
 function generateTableHead(table, data) {
