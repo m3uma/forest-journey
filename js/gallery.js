@@ -20,4 +20,10 @@ const swiper = new Swiper('.swiper', {
     },
     slidesPerView: 'auto',
     loop: true,
+    keyboard: {
+        enabled: true,
+      },
 });
+
+
+
