@@ -78,9 +78,9 @@ let offer = [
 
 let details = ["detals1", "detals2", "detals3", "detals4",
     "detals5", "detals6", "detals7", "detals8", 
-               "Choose 5 of the available services we offer and get a discount.",
-               "Choose 6 of the available services we offer and get a discount.", 
-               "Buy the full package of our services and receive a 25% discount and an additional surprise gift.", 
+               "Choose any 5 of the available adventures we offer and get a discount.",
+               "Choose any 6 of the available adventures we offer and get a discount.", 
+               "Buy the full package of our adventures and receive a 25% discount and an additional surprise gift.", 
                "There must be at least 10 people in the group."]
 
 
