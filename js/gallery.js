@@ -2,8 +2,8 @@ const swiper = new Swiper('.swiper', {
     autoplay: true,
     centeredSlides: true,
     coverflowEffect: {
-        rotate: 50,
-        depth: 500,
+        rotate: 30,
+        depth: 250,
     },
     effect: 'coverflow',
     loopedSlides: 4,
@@ -23,8 +23,6 @@ const swiper = new Swiper('.swiper', {
     loop: true,
     keyboard: {
         enabled: true,
-      },
+    },
+
 });
-
-
-
