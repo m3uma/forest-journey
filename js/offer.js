@@ -77,11 +77,12 @@ let offer = [
 ]
 
 let details = ["detals1", "detals2", "detals3", "detals4",
-    "detals5", "detals6", "detals7", "detals8", 
-               "Choose any 5 of the available adventures we offer and get a discount.",
-               "Choose any 6 of the available adventures we offer and get a discount.", 
-               "Buy the full package of our adventures and receive a 25% discount and an additional surprise gift.", 
-               "There must be at least 10 people in the group."]
+    "detals5", "detals6", "detals7",
+    "Choose any 4 of the available adventures we offer and get a discount.",
+    "Choose any 5 of the available adventures we offer and get a discount.",
+    "Choose any 6 of the available adventures we offer and get a discount.",
+    "Buy the full package of our adventures and receive a 25% discount and an additional surprise gift.",
+    "There must be at least 10 people in the group."]
 
 
 function generateTableHead(table, data) {
@@ -106,8 +107,8 @@ function generateTable(table, data, detail) {
             row.id = rowCounter;
             cell.onclick = () => {
                 (data[row.id].adventure)
-                ? showDetails(data[row.id].adventure, detail[row.id])
-                : showDetails("info", detail[row.id]);
+                    ? showDetails(data[row.id].adventure, detail[row.id])
+                    : showDetails("info", detail[row.id]);
             }
             let text = document.createTextNode(element[key]);
 
@@ -140,8 +141,8 @@ function generateTableMobile(table, data, detail) {
         row.id = rowCounter;
         cell.onclick = () => {
             (data[row.id].adventure)
-            ? showDetails(data[row.id].adventure, detail[row.id])
-            : showDetails("info", detail[row.id]);
+                ? showDetails(data[row.id].adventure, detail[row.id])
+                : showDetails("info", detail[row.id]);
         }
         for (key in element) {
             if (key === 'adventure') {
