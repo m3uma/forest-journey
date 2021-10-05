@@ -7,6 +7,18 @@ const imgArray = [
     './img/gallery/autumn_forest2.jpg',
     './img/gallery/autumn_forest3.jpg',
     './img/gallery/winter_forest.jpg',
+    './img/gallery/winter_forest2.jpg',
+    './img/gallery/winter_forest3.jpg',
+    './img/gallery/winter_forest4.jpg',
+    './img/gallery/bird.jpg',
+    './img/gallery/bird2.jpg',
+    './img/gallery/bird3.jpg',
+    './img/gallery/squirrel.jpg',
+    './img/gallery/squirrel2.jpg',
+    './img/gallery/squirrel3.jpg',
+    './img/gallery/fox.jpg',
+    './img/gallery/deer.jpg',
+    './img/gallery/deer2.jpg',
 ]
 
 const swiperWrapper = document.querySelector(".swiper-wrapper");
