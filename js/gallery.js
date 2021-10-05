@@ -30,12 +30,12 @@ const swiperWrapper = document.querySelector(".swiper-wrapper");
 for (let image in imgArray){
     const slide = document.createElement('div');
     slide.classList.add('swiper-slide');
+    slide.setAttribute('id', image);
     const imageSlide = document.createElement('img');
     imageSlide.setAttribute('src', imgArray[image]);
     slide.appendChild(imageSlide);
     swiperWrapper.appendChild(slide);
 }
-
 
 const swiper = new Swiper('.swiper', {
     autoplay: true,
@@ -67,3 +67,8 @@ const swiper = new Swiper('.swiper', {
     },
 
 });
+
+swiper.on('click', (slide) => {
+    console.log(slide.clickedSlide.id);
+    slide.clickedSlide.requestFullscreen();
+  });

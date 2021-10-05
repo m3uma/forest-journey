@@ -1,5 +1,11 @@
 @import './theme';
 
+:fullscreen {
+    img {
+        width: 100vw;
+    }
+}
+
 .gallery{
     width: 100vw;
     height: 100vh;
@@ -16,7 +22,6 @@
             width: 500px;
             height: 500px;
             text-align: center;
-            
 
             img {
                 width: 50vw;
@@ -45,7 +50,7 @@
         .swiper-button-prev, .swiper-button-next {
             color: $primaryColor;
         }
-      }
+    }
 }
 
 @media(max-width: $mobileSize) {
@@ -91,5 +96,11 @@
                 display: none;
             }
         }
+    }
+}
+
+:fullscreen {
+    img {
+        width: 100vw;
     }
 }
