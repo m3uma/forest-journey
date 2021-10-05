@@ -27,7 +27,7 @@ const imgArray = [
 
 const swiperWrapper = document.querySelector(".swiper-wrapper");
 
-for (let image in imgArray){
+for (let image in imgArray) {
     const slide = document.createElement('div');
     slide.classList.add('swiper-slide');
     slide.setAttribute('id', image);
@@ -71,4 +71,4 @@ const swiper = new Swiper('.swiper', {
 swiper.on('click', (slide) => {
     console.log(slide.clickedSlide.id);
     slide.clickedSlide.requestFullscreen();
-  });
+});
