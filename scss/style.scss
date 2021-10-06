@@ -127,6 +127,16 @@ nav{
     }
 }
 
+footer {
+    text-align: center;
+    height: 50px;
+    font-size: 25px;
+    letter-spacing: 1px;
+    background: rgba(128, 128, 128, 0.1);
+    padding: 15px;
+    border-top: solid 1px white;
+}
+
 @media(max-width: $mobileSize) {
     nav{
         ul{
@@ -146,6 +156,10 @@ nav{
         img {
             width: 50px;
         }
+    }
+
+    footer {
+        font-size: 15px;
     }
 }
 
