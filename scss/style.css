@@ -422,22 +422,6 @@
   }
 }
 
-:-webkit-full-screen img {
-  width: 100vw;
-}
-
-:-moz-full-screen img {
-  width: 100vw;
-}
-
-:-ms-fullscreen img {
-  width: 100vw;
-}
-
-:fullscreen img {
-  width: 100vw;
-}
-
 *, *::after, *::before {
   margin: 0;
   padding: 0;

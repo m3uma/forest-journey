@@ -69,6 +69,6 @@ const swiper = new Swiper('.swiper', {
 });
 
 swiper.on('click', (slide) => {
-    console.log(slide.clickedSlide.id);
-    slide.clickedSlide.requestFullscreen();
+    console.log(slide.clickedSlide.firstChild);
+    slide.clickedSlide.firstChild.requestFullscreen();
 });
