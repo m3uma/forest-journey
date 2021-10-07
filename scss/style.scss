@@ -24,7 +24,7 @@ html {
   scroll-behavior: smooth;
 
     &::-webkit-scrollbar-track   {
-        box-shadow: inset 100px 100px 16px rgba(0,0,0,0.3);
+        box-shadow: inset 100px 100px 16px $scrollColor;
         border-radius: 10px;
         background-color: $activeDot;
     }
