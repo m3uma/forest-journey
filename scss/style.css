@@ -422,6 +422,10 @@
   }
 }
 
+.contact {
+  height: 100vh;
+}
+
 *, *::after, *::before {
   margin: 0;
   padding: 0;
