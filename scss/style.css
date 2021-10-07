@@ -721,6 +721,16 @@ nav ul li a:active {
 
 .div__socialMedia .a__socialMedia img {
   width: 50px;
+  -webkit-transition: opacity 0.15s ease-out;
+  transition: opacity 0.15s ease-out;
+}
+
+.div__socialMedia .a__socialMedia img:hover {
+  opacity: 0.8;
+}
+
+.div__socialMedia .a__socialMedia img:active {
+  opacity: 0.6;
 }
 
 footer {

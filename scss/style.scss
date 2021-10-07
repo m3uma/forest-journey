@@ -124,6 +124,15 @@ nav{
 
         img {
             width: 50px;
+            transition: opacity 0.15s ease-out;
+
+            &:hover {
+                opacity: 0.8;
+            }
+    
+            &:active {
+                opacity: 0.6;
+            }
         }
     }
 }
