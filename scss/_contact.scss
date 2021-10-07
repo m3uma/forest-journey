@@ -10,13 +10,13 @@
 
     .form{
         margin: 100px auto;
-        background: rgba(128, 128, 128, 0.4);
+        background: $primaryBackground;
         width: 50%;
         min-height: 50%;
         border: solid 2px $primaryColor;
         border-radius: 20px;
         padding: 20px;
-        box-shadow: 0 0 5px white;
+        box-shadow: 0 0 5px $primaryColor;
         position: relative;
 
         .form__label{
@@ -37,7 +37,7 @@
             font-family: $primaryFont;
             font-size: 15px;
             color: $primaryColor;
-            background: rgba(128, 128, 128, 0.7);
+            background: $secondaryBackground;
             border: solid 1px $primaryColor;
             border-radius: 10px;
 
@@ -61,7 +61,7 @@
             margin: 50px 24.5% 0;
             font-size: 20px;
             font-weight: bold;
-            box-shadow: 0 0 2px white;
+            box-shadow: 0 0 2px $primaryColor;
 
             &:hover {
                 filter: brightness(110%);
@@ -78,7 +78,7 @@
             resize: none;
 
             &::-webkit-scrollbar-track   {
-                box-shadow: inset 100px 100px 16px rgba(128, 128, 128, 0.7);
+                box-shadow: inset 100px 100px 16px $secondaryBackground;
                 border-radius: 10px;
                 background-color: $activeDot;
             }
@@ -92,7 +92,7 @@
             &::-webkit-scrollbar-thumb {
                 border-radius: 10px;
                 box-shadow: 1px 1px 2px -1px $primaryColor inset;
-                background-color: rgba(128, 128, 128, 0.7);
+                background-color: $secondaryBackground;
         
                 &:hover {
                     background-color: $thirdColor;
