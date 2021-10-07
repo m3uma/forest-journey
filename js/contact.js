@@ -6,4 +6,5 @@ const sendButton = document.querySelector('.form__button');
 sendButton.onclick = (event) => {
     event.preventDefault();
     console.log(`User: ${userName.value}, E-mail: ${userEmail.value}, Message: ${userMessage.value}`);
+    document.querySelector('.form').reset();
 }
