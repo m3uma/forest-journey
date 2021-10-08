@@ -15,6 +15,7 @@
     <link href="scss/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="js/canvas.js" defer></script>
     <script src="js/slider.js"></script>
     <script src="js/offer.js" defer></script>
@@ -79,7 +80,7 @@
         </div>
         <a name="contact"></a>
         <div class="contact">
-            <form class="form"> 
+            <form method="POST" class="form"> 
                 <label class="form__label">Name:</label><input type="text" class="form__input name-js" placeholder="Enter your name" required /><br/>
                 <label class="form__label">E-mail:</label><input type="email" class="form__input mail-js" placeholder="Enter your e-mail address" required /><br/>
                 <label class="form__label">Message:</label><textarea class="form__input form__textarea message-js" placeholder="Enter the message" required ></textarea><br/>
