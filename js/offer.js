@@ -77,7 +77,8 @@ let offer = [
 ]
 
 let details = ["detals1", "detals2", "detals3", "detals4",
-    "detals5", "detals6", "detals7",
+    "detals5", "detals6",
+    "This adventure includes an overnight stay, depending on the weather conditions: under the stars in comfortable beds, in elven huts or tents, or in hobbit burrows. You can also choose the option that suits you best.",
     "Choose any 4 of the available adventures we offer and get a discount.",
     "Choose any 5 of the available adventures we offer and get a discount.",
     "Choose any 6 of the available adventures we offer and get a discount.",
