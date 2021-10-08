@@ -462,6 +462,8 @@
   color: white;
   background: rgba(128, 128, 128, 0.7);
   border: solid 1px white;
+  border: none;
+  border-bottom: solid 1px white;
   border-radius: 10px;
 }
 

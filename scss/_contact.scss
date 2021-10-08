@@ -40,6 +40,8 @@
             color: $primaryColor;
             background: $secondaryBackground;
             border: solid 1px $primaryColor;
+            border: none;
+            border-bottom: solid 1px $primaryColor;
             border-radius: 10px;
 
             &::placeholder {
