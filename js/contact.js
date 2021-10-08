@@ -12,9 +12,7 @@ document.querySelector('.form__button').onclick = (event) => {
 
 function sendEmail(name, email, message) {
     Email.send({
-        Host: "smtp.gmail.com",
-        Username: "dev.test.mail669@gmail.com",
-        Password: "DevTestMail669",
+        SecureToken: "f836f703-2fed-4bfc-83ae-4efca20ba4e5",
         To: 'dev.test.mail669@gmail.com',
         From: `${email}`,
         Subject: `${name} send you a message`,
