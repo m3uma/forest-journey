@@ -7,7 +7,10 @@ document.querySelector('.form__button').onclick = (event) => {
     console.log(`User: ${userName}, E-mail: ${userEmail}, Message: ${userMessage}`);
     document.querySelector('.form').reset();
 
-    sendEmail(userName, userEmail, userMessage);
+    if(userName && userEmail && userMessage)
+        sendEmail(userName, userEmail, userMessage);
+    else
+        alert("Fill in the missing data");
 }
 
 function sendEmail(name, email, message) {
