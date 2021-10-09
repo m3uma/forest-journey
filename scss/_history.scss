@@ -5,12 +5,13 @@
     height: 100%;
     min-height: 100vh;
     position: relative;
-    margin: 50px 0 0;
+    margin: 0;
 
     .about_us {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 50px;
 
         img {
             width: 40%;
@@ -72,7 +73,7 @@
     }
 }
 
-@media(max-width: $mobileSize) {
+@media(max-width: 1000px) {
     .history {
         .about_us {
             flex-wrap: wrap;
@@ -84,7 +85,6 @@
 
             p {
                 width: 90%;
-                font-size: 20px;
             }
         }
     }

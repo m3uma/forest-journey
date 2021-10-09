@@ -268,7 +268,7 @@
     -webkit-box-align: normal;
         -ms-flex-align: normal;
             align-items: normal;
-    margin: 100px 0;
+    margin: 50px 0;
     min-height: 220vh;
   }
   .offer .offer__detail {
@@ -429,11 +429,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 50px 0;
+  margin: 0;
 }
 
 .contact .form {
-  margin: 100px auto;
+  margin: 0 auto;
   background: rgba(128, 128, 128, 0.4);
   width: 50%;
   min-height: 50%;
@@ -595,7 +595,7 @@
   height: 100%;
   min-height: 100vh;
   position: relative;
-  margin: 50px 0 0;
+  margin: 0;
 }
 
 .history .about_us {
@@ -608,6 +608,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 50px;
 }
 
 .history .about_us img {
@@ -662,7 +663,7 @@
   }
 }
 
-@media (max-width: 676px) {
+@media (max-width: 1000px) {
   .history .about_us {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -673,7 +674,6 @@
   }
   .history .about_us p {
     width: 90%;
-    font-size: 20px;
   }
 }
 
@@ -800,6 +800,15 @@ nav ul li a:active {
   font-weight: bold;
 }
 
+.reference {
+  font-family: "Major Mono Display", monospace;
+  font-size: 50px;
+  font-weight: bold;
+  width: 100vw;
+  display: block;
+  text-align: center;
+}
+
 footer {
   text-align: center;
   height: 50px;
@@ -822,11 +831,20 @@ footer {
   nav ul li {
     padding: 10px 0;
   }
+  .reference {
+    font-size: 40px;
+  }
   .ico img {
     width: 50px;
   }
   footer {
     font-size: 15px;
+  }
+}
+
+@media (max-width: 300px) {
+  .reference {
+    font-size: 35px;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -78,6 +78,7 @@ main {
     }
 }
 
+
 nav{
     font-size: 30px;
     width: 100%;
@@ -114,6 +115,15 @@ nav{
     }    
 }
 
+.reference {
+    font-family: $fontFamily1;
+    font-size: 50px;
+    font-weight: bold;
+    width: 100vw;
+    display: block;
+    text-align: center;  
+}
+
 footer {
     text-align: center;
     height: 50px;
@@ -139,6 +149,10 @@ footer {
         }
     }
 
+    .reference {
+        font-size: 40px;
+    }
+
     .ico {     
         img {
             width: 50px;
@@ -147,6 +161,12 @@ footer {
 
     footer {
         font-size: 15px;
+    }
+}
+
+@media(max-width: $miniSize) {
+    .reference {
+        font-size: 35px;
     }
 }
 
