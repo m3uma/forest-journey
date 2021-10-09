@@ -1,0 +1,91 @@
+@import './theme';
+
+.history {
+    width: 100vw;
+    height: 100%;
+    min-height: 100vh;
+    position: relative;
+    margin: 50px 0 0;
+
+    .about_us {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 40%;
+            border-radius: 5px;
+            margin: 20px;
+            box-shadow: 0 0 5px $primaryColor;
+        }
+
+        p {
+            width: 50%;
+            font-size: 40px;
+            padding: 20px;
+            text-align: center;
+        }
+    }
+
+    .div__socialMedia {
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        margin-top: 50px;
+    
+        .a__socialMedia {
+            padding: 20px;
+    
+            img {
+                width: 50px;
+                transition: opacity 0.15s ease-out;
+    
+                &:hover {
+                    opacity: 0.8;
+                }
+        
+                &:active {
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 1600px) {
+    .history {
+        .about_us {
+            p {
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+@media(max-width: 1200px) {
+    .history {
+        .about_us {
+            p {
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+@media(max-width: $mobileSize) {
+    .history {
+        .about_us {
+            flex-wrap: wrap;
+
+            img {
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            p {
+                width: 90%;
+                font-size: 20px;
+            }
+        }
+    }
+}
