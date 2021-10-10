@@ -77,7 +77,8 @@ let offer = [
 ]
 
 let details = ["detals1", "detals2", "detals3", "detals4",
-    "detals5", "detals6",
+    "detals5",
+    "This adventure includes an evening feast (usually at 6 p.m., but it is possible ealier by prior arrangement), which includes: meat: poultry, pork, beef - to choose from, fruit, vegetables, pasta, pizza, wine, water, juices, small snacks. The whole venture takes place in one of our elven tents at the table. After the meal, it is also possible to take part in the fun with music - for those willing (included in the price of the feast).",
     "This adventure includes an overnight stay, depending on the weather conditions: under the stars in comfortable beds, in elven huts or tents, or in hobbit burrows. You can also choose the option that suits you best.",
     "Choose any 4 of the available adventures we offer and get a discount.",
     "Choose any 5 of the available adventures we offer and get a discount.",
