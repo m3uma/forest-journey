@@ -15,9 +15,40 @@
     justify-content: center;
     align-items: center;
 
+    .folders {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        .folder {  
+            img {
+                width: 20vw;
+                margin: 20px;
+                border-radius: 50px;
+                border: 2px solid $primaryColor;
+    
+                &:hover {
+                    box-shadow: 0 0 5px $primaryColor;
+                }
+            }
+        }
+    }
+
     .swiper {
         width: 100%;
         padding: 50px 0;
+        display: none;
+        position: absolute;
+        top: 20%;
+
+        .close__swiper {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+
+            img {
+                width: 25px;
+            }
+        }
 
         .swiper-slide {
             width: 500px;
@@ -45,8 +76,32 @@
     }
 }
 
+@media(max-width: 1200px) {
+    .gallery {
+        .folders {
+            grid-template-columns: 1fr 1fr;
+
+            .folder {
+                img {
+                    width: 30vw;
+                }
+            }
+        }
+    }
+
+}
+
 @media(max-width: $mobileSize) {
     .gallery {
+        .folders {
+            grid-template-columns: 1fr;
+
+            .folder {
+                img {
+                    width: 90vw;
+                }
+            }
+        }
         .swiper {
             .swiper-slide {
                 width: 300px;
