@@ -806,6 +806,7 @@ nav ul li a:active {
   font-weight: bold;
   width: 100vw;
   display: block;
+  margin-top: 100px;
   text-align: center;
 }
 
