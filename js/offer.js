@@ -1,4 +1,4 @@
-let offer = [
+const offer = [
     {
         adventure: "walk in the woods",
         Adults: "30 PLN",
