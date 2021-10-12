@@ -377,10 +377,12 @@
 
 .gallery .swiper {
   width: 100%;
+  height: 100vh;
+  background: rgba(128, 128, 128, 0.7);
   padding: 50px 0;
   display: none;
   position: absolute;
-  top: 20%;
+  top: 0;
 }
 
 .gallery .swiper .close__swiper {
@@ -397,10 +399,16 @@
   width: 500px;
   height: 500px;
   text-align: center;
+  margin-top: 100px;
 }
 
 .gallery .swiper .swiper-slide img {
   width: 50vw;
+}
+
+.gallery .swiper .swiper-pagination {
+  position: fixed;
+  bottom: 50px;
 }
 
 .gallery .swiper .swiper-pagination .swiper-pagination-bullet {
@@ -645,9 +653,6 @@
   min-height: 100vh;
   position: relative;
   margin: 0;
-}
-
-.history .about_us {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -657,7 +662,23 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.history .about_us {
   margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .history .about_us img {
@@ -679,7 +700,9 @@
   width: 100%;
   height: 100px;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 200px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .history .div__socialMedia .a__socialMedia {
@@ -723,6 +746,9 @@
   }
   .history .about_us p {
     width: 90%;
+  }
+  .history .div__socialMedia {
+    margin-top: 50px;
   }
 }
 
