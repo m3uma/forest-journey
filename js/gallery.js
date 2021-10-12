@@ -39,7 +39,10 @@ const imgArrayHeaders = [
 
 const swiperWrapper = document.querySelector(".swiper-wrapper");
 const galleryDiv = document.querySelector(".folders");
-document.querySelector('.close__swiper').onclick = () => document.querySelector(".swiper").style.display = "none";
+
+document.querySelector('.close__swiper').onclick = () => {
+    document.querySelector(".swiper").style.display = "none";
+};
 // document.querySelector(".swiper").style.display = "block";
 
 function createFolders() {
@@ -53,6 +56,7 @@ function createFolders() {
         folder.onclick = () => {
             console.log(arrays[image])
             createSwiper(arrays[image]);
+
             document.querySelector(".swiper").style.display = "block";
         };
         folder.appendChild(folderImg);
@@ -108,5 +112,7 @@ swiper.on('click', (slide) => {
     console.log(slide.clickedSlide.firstChild);
     slide.clickedSlide.firstChild.requestFullscreen();
 });
+
+
 
 createFolders();
