@@ -40,32 +40,82 @@ const imgArrayHeaders = [
 const swiperWrapper = document.querySelector(".swiper-wrapper");
 const galleryDiv = document.querySelector(".folders");
 
-document.querySelector('.close__swiper').onclick = () => {
-    document.querySelector(".swiper").style.display = "none";
-};
-// document.querySelector(".swiper").style.display = "block";
+createFolders();
+
+function createSwiper(folder, wrapper, id, imgArray) {
+    if (!(folder.classList.contains('exist'))) {
+        const swiper = new Swiper(wrapper, {
+            autoplay: true,
+            centeredSlides: true,
+            coverflowEffect: {
+                rotate: 30,
+                depth: 250,
+                slideShadows: false,
+                stretch: 100,
+            },
+            effect: 'coverflow',
+            loopedSlides: 4,
+            pagination: {
+                el: `.swiper-pagination-${id}`,
+                clickable: true,
+                dynamicBullets: true,
+            },
+            navigation: {
+                nextEl: `.swiper-button-next-${id}`,
+                prevEl: `.swiper-button-prev-${id}`,
+            },
+            mousewheel: {
+                invert: true,
+            },
+            slidesPerView: 'auto',
+            loop: true,
+            keyboard: {
+                enabled: true,
+            },
+
+        });
+
+        createSlides(imgArray, id);
+
+        swiper.on('click', (slide) => {
+            console.log(slide.clickedSlide.firstChild);
+            slide.clickedSlide.firstChild.requestFullscreen();
+        });
+    }
+
+    toggleSwiper(folder, wrapper, id);
+
+
+
+}
 
 function createFolders() {
     const arrays = [imgArrayForest, imgArrayAutumnForest, imgArrayWinterForest, imgArrayAnimals];
+    const classes = ['forest', 'autumn_forest', 'winter_forest', 'animals'];
+    const swipers = ['.swiper_forest', '.swiper_autumn_forest', '.swiper_winter_forest', '.swiper_animals'];
+    const id = ['f', 'af', 'wf', 'a'];
     for (let image in imgArrayHeaders) {
         const folder = document.createElement('div');
         const folderImg = document.createElement('img');
         folder.classList.add('folder');
-        folder.setAttribute('id', arrays[image]);
+        folder.classList.add(classes[image]);
+        folder.onclick = () => createSwiper(document.querySelector(`.${classes[image]}`), swipers[image], id[image], arrays[image]);
         folderImg.setAttribute('src', imgArrayHeaders[image]);
-        folder.onclick = () => {
-            console.log(arrays[image])
-            createSwiper(arrays[image]);
-
-            document.querySelector(".swiper").style.display = "block";
-        };
         folder.appendChild(folderImg);
         galleryDiv.appendChild(folder);
     }
 
 }
 
-function createSwiper(imgArray) {
+function toggleSwiper(folder, wrapper, id) {
+    document.querySelector(wrapper).style.display = "block";
+    document.querySelector(`.close__swiper-${id}`).onclick = () => {
+        document.querySelector(wrapper).style.display = "none";
+        folder.classList.add('exist');
+    };
+}
+
+function createSlides(imgArray, id){
     for (let image in imgArray) {
         const slide = document.createElement('div');
         slide.classList.add('swiper-slide');
@@ -73,46 +123,7 @@ function createSwiper(imgArray) {
         const imageSlide = document.createElement('img');
         imageSlide.setAttribute('src', imgArray[image]);
         slide.appendChild(imageSlide);
-        swiperWrapper.appendChild(slide);
+        document.querySelector(`.swiper-wrapper-${id}`).appendChild(slide);
     }
 }
 
-const swiper = new Swiper('.swiper', {
-    autoplay: true,
-    centeredSlides: true,
-    coverflowEffect: {
-        rotate: 30,
-        depth: 250,
-        slideShadows: false,
-        stretch: 100,
-    },
-    effect: 'coverflow',
-    loopedSlides: 4,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        dynamicBullets: true,
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    mousewheel: {
-        invert: true,
-    },
-    slidesPerView: 'auto',
-    loop: true,
-    keyboard: {
-        enabled: true,
-    },
-
-});
-
-swiper.on('click', (slide) => {
-    console.log(slide.clickedSlide.firstChild);
-    slide.clickedSlide.firstChild.requestFullscreen();
-});
-
-
-
-createFolders();
