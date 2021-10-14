@@ -115,7 +115,7 @@
     .offer {
         align-items: normal;
         margin: 50px 0;
-        min-height: 220vh;
+        min-height: 200vh;
 
         .offer__detail {
             width: 300px;
@@ -133,7 +133,6 @@
             padding: 20px;
             margin: 0 auto;
             background-color: $primaryBackground;
-            position: absolute;
             width: 95%;
 
             tr {
