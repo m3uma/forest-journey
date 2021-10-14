@@ -37,7 +37,6 @@ const imgArrayHeaders = [
     './img/gallery/animals.png',
 ];
 
-const swiperWrapper = document.querySelector(".swiper-wrapper");
 const galleryDiv = document.querySelector(".folders");
 
 createFolders();
@@ -84,9 +83,6 @@ function createSwiper(folder, wrapper, id, imgArray) {
     }
 
     toggleSwiper(folder, wrapper, id);
-
-
-
 }
 
 function createFolders() {
@@ -104,7 +100,6 @@ function createFolders() {
         folder.appendChild(folderImg);
         galleryDiv.appendChild(folder);
     }
-
 }
 
 function toggleSwiper(folder, wrapper, id) {
@@ -126,4 +121,3 @@ function createSlides(imgArray, id){
         document.querySelector(`.swiper-wrapper-${id}`).appendChild(slide);
     }
 }
-
