@@ -109,6 +109,10 @@
             }
         }
         .swiper {
+            position: fixed;
+            top: 50%;                       
+            transform: translate(0, -50%);
+
             .swiper-slide {
                 width: 300px;
                 height: 300px;
@@ -125,18 +129,6 @@
             .swiper-button-prev, .swiper-button-next, .swiper-pagination {
                 display: none;
             }
-        }
-
-        .swiper_autumn_forest{
-            top: 50vh;
-        }
-
-        .swiper_winter_forest{
-            top: 100vh;
-        }
-
-        .swiper_animals {
-            top: 150vh;
         }
     }
 }

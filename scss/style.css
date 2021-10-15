@@ -439,6 +439,12 @@
   .gallery .folders .folder img {
     width: 90vw;
   }
+  .gallery .swiper {
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
   .gallery .swiper .swiper-slide {
     width: 300px;
     height: 300px;
@@ -451,15 +457,6 @@
   }
   .gallery .swiper .swiper-button-prev, .gallery .swiper .swiper-button-next, .gallery .swiper .swiper-pagination {
     display: none;
-  }
-  .gallery .swiper_autumn_forest {
-    top: 50vh;
-  }
-  .gallery .swiper_winter_forest {
-    top: 100vh;
-  }
-  .gallery .swiper_animals {
-    top: 150vh;
   }
 }
 
