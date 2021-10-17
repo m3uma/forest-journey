@@ -76,7 +76,8 @@ const offer = [
     }
 ]
 
-let details = ["detals1", "detals2", "detals3",
+let details = ["detals1", "detals2",
+    "This adventure includes the search for forest animals, including: wild boars, foxes, roe deers, elks, deers, woodpeckers, forest beetles and many, many more. There are surprises for the most observant participants.",
     "This adventure includes a wandering with basket in search of forest treasures. Depending on the season, they can be: flowers, blueberries, raspberries, mushrooms, chestnuts, leaves and many, many more. Finally, the participants create compositions from the collected items.",
     "This adventure includes telling ancient forest legends around the campfire, interspersed with playing instruments and singing, and baking sausages and potatoes by the fire.",
     "This adventure includes an evening feast (usually at 6 p.m., but it is possible ealier by prior arrangement), which includes: meat: poultry, pork, beef - to choose from, fruit, vegetables, pasta, pizza, wine, water, juices, small snacks. The whole venture takes place in one of our elven tents at the table. After the meal, it is also possible to take part in the fun with music - for those willing (included in the price of the feast).",
