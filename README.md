@@ -1,4 +1,4 @@
-# forest-journey
+# FOREST JOURNEY
 
 ## Description
 
