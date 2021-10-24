@@ -19,4 +19,6 @@ Then there is a photo gallery grouped by theme, made with the swiper js api. Aft
 
 Below is a contact form - after filling in all the required fields and pressing the "SEND A MESSAGE" button, the message will be sent. If the message has been delivered to the e-mail inbox, an alert appears in the application about its successful delivery.
 
+Then there is a section with information about the company. Created using flex. There are also links to social media such as: FaceBook, Instagram and Twitter.
+
 **[CHECK IT OUT!](https://m3uma.github.io/forest-journey/)**
