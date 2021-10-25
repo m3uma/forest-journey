@@ -21,4 +21,6 @@ Below is a contact form - after filling in all the required fields and pressing 
 
 Then there is a section with information about the company. Created using flex. There are also links to social media such as: FaceBook, Instagram and Twitter.
 
+Clicking on the deer icon takes you to the very top of the page.
+
 **[CHECK IT OUT!](https://m3uma.github.io/forest-journey/)**
