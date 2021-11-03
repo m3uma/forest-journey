@@ -11,7 +11,9 @@ The website includes:
 * contact form by which you can send an e-mail using the smtp protocol,
 * section with general news about the company and links to social media.
 
-On the "forest journey" page you can see the company's offer. At the top of the page there is a slider made in js - you can scroll it using the arrows on the screen, on the keyboard or select a slide by clicking the dot at the bottom.
+On the "forest journey" page you can see the company's offer. There is a menu at the top of the page. After clicking on a given option, you will be taken to the corresponding section.
+
+Then there is a slider made in js - you can scroll it using the arrows on the screen, on the keyboard or select a slide by clicking the dot at the bottom.
 
 Below is a section with the company's offer generated automatically. After clicking on a given adventure, its details are shown. To close them, press the cross in the upper right corner.
 
